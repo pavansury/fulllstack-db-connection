@@ -123,9 +123,3 @@ The frontend will typically run at `http://localhost:3000`.
 ### Root (`package.json`)
 
 - `npm test` – runs the frontend tests by changing into the `frontend` folder and executing `CI=true npm test`. In CI this is configured to run once in non-watch mode.
-
-## Notes
-
-- Ensure MySQL is running and credentials in the backend `.env` are correct.
-- Ensure `REACT_APP_API_URL` in the frontend `.env` matches the backend URL (including `/api` prefix).
-- `.env` files are not committed; keep your credentials private.
