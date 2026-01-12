@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "install-all": "npm install",
-    "test": "cd frontend && npm test",
+    "test": "cd frontend && npm test -- --watchAll=false",
     "start-backend": "npm run start --workspace=backend",
     "start-frontend": "npm run start --workspace=frontend",
     "dev-backend": "npm run dev --workspace=backend",
