@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
@@ -47,6 +48,19 @@ app.post('/api/users', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
+});
+
+// Serve React frontend build in production
+const buildPath = path.join(__dirname, '..', 'frontend', 'build');
+
+app.use(express.static(buildPath));
+
+// Catch-all handler to serve React's index.html for non-API routes
+app.use((req, res, next) => {
+    if (req.path.startsWith('/api')) {
+        return next();
+    }
+    res.sendFile(path.join(buildPath, 'index.html'));
 });
 
 // Start server
