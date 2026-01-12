@@ -120,6 +120,10 @@ The frontend will typically run at `http://localhost:3000`.
 - `npm run build` – build production assets
 - `npm test` – run tests (if any configured)
 
+### Root (`package.json`)
+
+- `npm test` – runs the frontend tests by changing into the `frontend` folder and executing `CI=true npm test`. In CI this is configured to run once in non-watch mode.
+
 ## Notes
 
 - Ensure MySQL is running and credentials in the backend `.env` are correct.
