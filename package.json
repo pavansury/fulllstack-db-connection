@@ -1,0 +1,17 @@
+{
+  "name": "fulllstack-db-connection",
+  "version": "1.0.0",
+  "description": "Fullstack MySQL DB Connection App",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "start-backend": "npm run start --workspace=backend",
+    "start-frontend": "npm run start --workspace=frontend",
+    "dev-backend": "npm run dev --workspace=backend",
+    "build-frontend": "npm run build --workspace=frontend"
+  }
+}
