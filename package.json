@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "install-all": "npm install",
-    "test": "cd frontend && CI=true npm test -- --watchAll=false --runInBand",
+    "test": "cd frontend && CI=true npm test",
     "start": "npm run build-frontend && npm run start-backend",
     "start-backend": "npm run start --workspace=backend",
     "start-frontend": "npm run start --workspace=frontend",
